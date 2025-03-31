@@ -17,6 +17,7 @@ Route::get('/login', [AuthController::class, 'login']);
 
 Route::middleware(['auth:sanctum', 'auth.refresh'])->group(function () {
     // Unidade
+    Route::get('/unidade/{unid_id}/servidores-efetivos', [UnidadeController::class, 'getServidoresEfetivos']);
     Route::resource('unidade', UnidadeController::class);
 
     // Servidor Efetivo

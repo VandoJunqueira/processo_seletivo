@@ -7,6 +7,7 @@ use App\Http\Requests\unidade\UnidadeStoreRequest;
 use App\Services\Unidade\UnidadeDestroyService;
 use App\Services\unidade\UnidadeFindService;
 use App\Services\Unidade\UnidadeListService;
+use App\Services\Unidade\UnidadeServidoresEfetivosService;
 use App\Services\unidade\UnidadeStoreService;
 use App\Services\Unidade\UnidadeUpdateService;
 use Illuminate\Http\Request;
@@ -19,7 +20,8 @@ class UnidadeController extends Controller
         private UnidadeStoreService $unidadeStoreService,
         private UnidadeFindService $unidadeFindService,
         private UnidadeDestroyService $unidadeDestroyService,
-        private UnidadeUpdateService $unidadeUpdateService
+        private UnidadeUpdateService $unidadeUpdateService,
+        private UnidadeServidoresEfetivosService $unidadeServidoresEfetivosService
     ) {}
 
     /**
@@ -132,6 +134,21 @@ class UnidadeController extends Controller
         return response()->json([
             'status' => 'error',
             'message' => 'Unidade não encontrada ou erro ao deletar.',
+        ], 404);
+    }
+
+    public function getServidoresEfetivos(int $unid_id)
+    {
+        if ($unidade = $this->unidadeServidoresEfetivosService->handle($unid_id)) {
+            return response()->json([
+                'status' => 'success',
+                'data' => $unidade,
+            ], 200);
+        }
+
+        return response()->json([
+            'status' => 'error',
+            'message' => 'Unidade não encontrada.',
         ], 404);
     }
 }

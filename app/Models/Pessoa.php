@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -42,6 +43,14 @@ class Pessoa extends Model
             'pes_id',
             'end_id'
         );
+    }
+
+
+    protected function getIdadeAttribute(): ?int
+    {
+        return $this->pes_data_nascimento
+            ? Carbon::parse($this->pes_data_nascimento)->age
+            : null;
     }
 
     /**

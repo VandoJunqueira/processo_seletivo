@@ -26,9 +26,9 @@ class LotacaoStoreRequest extends FormRequest
         return [
             'pes_id' => 'required|integer|exists:pessoa,pes_id',
             'unid_id' => 'required|integer|exists:unidade,unid_id',
-            'lot_data_lotacao' => 'required|date',
-            'lot_data_remocao' => 'nullable|date',
-            'lot_portaria' => 'required|string|max:100'
+            'data_lotacao' => 'required|date',
+            'data_remocao' => 'nullable|date',
+            'portaria' => 'required|string|max:100'
         ];
     }
 
@@ -43,14 +43,14 @@ class LotacaoStoreRequest extends FormRequest
             'unid_id.integer' => 'O campo "unid_id" deve ser um número inteiro.',
             'unid_id.exists' => 'O "unid_id" informado não existe na base de dados.',
 
-            'lot_data_lotacao.required' => 'A data de lotação é obrigatória.',
-            'lot_data_lotacao.date' => 'A data de lotação deve estar no formato válido (YYYY-MM-DD).',
+            'data_lotacao.required' => 'A data de lotação é obrigatória.',
+            'data_lotacao.date' => 'A data de lotação deve estar no formato válido (YYYY-MM-DD).',
 
-            'lot_data_remocao.date' => 'A data de remoção deve estar no formato válido (YYYY-MM-DD).',
+            'data_remocao.date' => 'A data de remoção deve estar no formato válido (YYYY-MM-DD).',
 
-            'lot_portaria.required' => 'O campo "lot_portaria" é obrigatório.',
-            'lot_portaria.string' => 'O campo "lot_portaria" deve ser um texto.',
-            'lot_portaria.max' => 'O campo "lot_portaria" não pode ter mais que 100 caracteres.'
+            'portaria.required' => 'O campo "portaria" é obrigatório.',
+            'portaria.string' => 'O campo "portaria" deve ser um texto.',
+            'portaria.max' => 'O campo "portaria" não pode ter mais que 100 caracteres.'
         ];
     }
 

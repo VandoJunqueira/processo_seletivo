@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignIdFor(Pessoa::class, 'pes_id')->constrained();
             $table->foreignIdFor(Unidade::class, 'unid_id')->constrained();
             $table->date('lot_data_lotacao');
-            $table->date('lot_data_remocao');
+            $table->date('lot_data_remocao')->nullable();
             $table->string('lot_portaria', 100);
         });
     }

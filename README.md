@@ -1,4 +1,4 @@
-# Processo Seletivo: PSS 02/2025/SEPLAG (Analista de TI - Perfil Sênior)
+# Processo Seletivo: PSS 02/2025/SEPLAG (Analista de TI - DESENVOLVEDOR PHP - SÊNIOR)
 
 ### VANDO ANTÔNIO JUNQUEIRA
 
@@ -385,4 +385,4 @@ Endpoint: `GET /api/unidade/{id}`
 
 ## Créditos
 
-Este projeto foi desenvolvido por [Vando Junqueira](https://github.com/VandoJunqueira/) como parte de um teste prático.
+Este projeto foi desenvolvido por [Vando Junqueira](https://github.com/VandoJunqueira/) como parte do Processo Seletivo - PSS 02/2025/SEPLAG (Analista de TI - DESENVOLVEDOR PHP - SÊNIOR).

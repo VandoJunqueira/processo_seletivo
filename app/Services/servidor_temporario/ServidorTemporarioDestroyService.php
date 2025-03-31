@@ -24,7 +24,7 @@ class ServidorTemporarioDestroyService
                 return null;
             }
 
-            $servidorTemporario = $pessoa->servidorTemporario;
+            $pessoa->servidorTemporario;
 
             ServidorTemporario::where('pes_id', $id)->delete();
 

@@ -24,7 +24,7 @@ class ServidorEfetivoDestroyService
                 return null;
             }
 
-            $servidorEfetivo = $pessoa->servidorEfetivo;
+            $pessoa->servidorEfetivo;
 
             ServidorEfetivo::where('pes_id', $id)->delete();
 

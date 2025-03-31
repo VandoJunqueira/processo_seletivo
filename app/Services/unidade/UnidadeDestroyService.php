@@ -18,6 +18,12 @@ class UnidadeDestroyService
 
             $unidade->load('endereco');
 
+            $unidade->endereco()->detach();
+
+            if ($unidade->endereco) {
+                $unidade->endereco->delete();
+            }
+
             $unidade->delete();
 
             return $unidade;

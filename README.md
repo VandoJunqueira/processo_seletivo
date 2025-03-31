@@ -362,74 +362,25 @@ Endpoint: `GET /api/unidade/{id}`
 ```json
 {
     "status": "success",
+    "message": "Unidade deletada com sucesso.",
     "data": {
-        "current_page": 1,
-        "data": [
+        "unid_id": 1,
+        "unid_nome": "Teste - edit",
+        "unid_sigla": "MT",
+        "endereco": [
             {
-                "unid_id": 1,
-                "unid_nome": "Teste - edit",
-                "unid_sigla": "MT",
-                "endereco": [
-                    {
-                        "end_id": 1,
-                        "end_tipo_logradouro": "Avenida",
-                        "end_logradouro": "Brasil",
-                        "end_numero": 1234,
-                        "end_bairro": "Centro",
-                        "cid_id": 1,
-                        "pivot": {
-                            "unid_id": 1,
-                            "end_id": 1
-                        }
-                    }
-                ]
-            },
-            {
-                "unid_id": 2,
-                "unid_nome": "Teste - edit",
-                "unid_sigla": "MT",
-                "endereco": [
-                    {
-                        "end_id": 3,
-                        "end_tipo_logradouro": "Avenida",
-                        "end_logradouro": "Brasil",
-                        "end_numero": 1234,
-                        "end_bairro": "Centro",
-                        "cid_id": 1,
-                        "pivot": {
-                            "unid_id": 2,
-                            "end_id": 3
-                        }
-                    }
-                ]
-            },
-            {
-                "unid_id": 3,
-                "unid_nome": "Teste - edit",
-                "unid_sigla": "MT",
-                "endereco": [
-                    {
-                        "end_id": 6,
-                        "end_tipo_logradouro": "Avenida",
-                        "end_logradouro": "Brasil",
-                        "end_numero": 1234,
-                        "end_bairro": "Centro",
-                        "cid_id": 1,
-                        "pivot": {
-                            "unid_id": 3,
-                            "end_id": 6
-                        }
-                    }
-                ]
+                "end_id": 6,
+                "end_tipo_logradouro": "Avenida",
+                "end_logradouro": "Brasil",
+                "end_numero": 1234,
+                "end_bairro": "Centro",
+                "cid_id": 1,
+                "pivot": {
+                    "unid_id": 3,
+                    "end_id": 6
+                }
             }
-        ],
-        "first_page_url": "http://localhost/api/unidade?page=1",
-        "from": 1,
-        "next_page_url": null,
-        "path": "http://localhost/api/unidade",
-        "per_page": 10,
-        "prev_page_url": null,
-        "to": 3
+        ]
     }
 }
 ```

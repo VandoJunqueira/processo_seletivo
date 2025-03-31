@@ -20,10 +20,13 @@ class UnidadeDestroyService
 
             $unidade->endereco()->detach();
 
-            if ($unidade->endereco) {
+            if ($unidade->endereco instanceof \Illuminate\Database\Eloquent\Collection) {
+                foreach ($unidade->endereco as $endereco) {
+                    $endereco->delete();
+                }
+            } elseif ($unidade->endereco) {
                 $unidade->endereco->delete();
             }
-
             $unidade->delete();
 
             return $unidade;

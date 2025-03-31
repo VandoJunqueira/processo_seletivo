@@ -120,7 +120,7 @@ Endpoint: `POST /api/authenticate`
     "password": "123456"
 }
 ```
-**Exemplo de resposta de sucesso (201 OK):**
+**Exemplo de resposta de sucesso (200 OK):**
 
 ```json
 {

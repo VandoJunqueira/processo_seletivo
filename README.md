@@ -84,6 +84,20 @@ senha: 123456
 
 Abra o seu navegador e acesse [http://localhost](http://localhost) para visualizar a aplicação em funcionamento.
 
+## Coleção de Endpoints no Postman  
+
+Para facilitar os testes, disponibilizei uma **coleção do Postman** contendo todos os endpoints da API.  
+
+### **Acesse a coleção no Postman:**  
+🔗 [Coleção de Endpoints - Postman](https://www.postman.com/universal-station-634857/processo-seletivo/collection/vcunclx/api)  
+
+Essa coleção já contém os endpoints configurados com os métodos corretos, facilitando o envio de requisições e a validação das respostas.  
+
+### **Como Utilizar**  
+1. Acesse o link da coleção no Postman.  
+2. Importe a coleção para o seu Postman.  
+3. Configure as variáveis necessárias, como `{{base_url}}` e o `Authorization`  `{{tokem}}`.  
+4. Execute os testes conforme necessário.  
 
 ## Autenticação e Uso do Token  
 
@@ -95,10 +109,10 @@ Endpoint: `POST /api/authenticate`
 
 ## BODY PARAMS
 
-| Parâmetro | Tipo   | Obrigatório | Descrição                      |
-| --------- | ------ | ----------- | ------------------------------ |
-| email     | string | Sim         | Endereço de e-mail do usuário  |
-| password  | string | Sim         | Senha do usuário               |
+| Parâmetro | Tipo   | Obrigatório | Descrição                     |
+| --------- | ------ | ----------- | ----------------------------- |
+| email     | string | Sim         | Endereço de e-mail do usuário |
+| password  | string | Sim         | Senha do usuário              |
 
 ### **Exemplo de Requisição**  
 
@@ -126,6 +140,10 @@ O token tem um tempo de expiração definido no campo "expires_in", que indica o
 Após esse tempo, será necessário obter um novo token realizando a autenticação novamente
 
 ## Rotas da API
+
+Abaixo estão alguns exemplos de endpoints disponíveis na API. Para visualizar a lista completa e realizar testes de forma prática, acesse a **Coleção de Endpoints no Postman**:  
+
+🔗 [Coleção de Endpoints - Postman](https://www.postman.com/universal-station-634857/processo-seletivo/collection/vcunclx/api)  
 
 ### Endpoints Unidade
 

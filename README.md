@@ -82,10 +82,6 @@ email: user@test.com
 senha: 123456
 ```
 
-### 7. Acessar a Aplicação
-
-Abra o seu navegador e acesse [http://localhost](http://localhost) para visualizar a aplicação em funcionamento.
-
 ## Coleção de Endpoints no Postman  
 
 Para facilitar os testes, disponibilizei uma **coleção do Postman** contendo todos os endpoints da API.  

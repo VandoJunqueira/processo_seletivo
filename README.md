@@ -94,7 +94,7 @@ Essa coleção já contém os endpoints configurados com os métodos corretos, f
 ### **Como Utilizar**  
 1. Acesse o link da coleção no Postman.  
 2. Importe a coleção para o seu Postman.  
-3. Configure as variáveis necessárias, como `{{base_url}}` e o `Authorization`  `{{tokem}}`.  
+3. Configure as variáveis necessárias, como `{{base_url}}` e o Authorization `{{tokem}}`.  
 4. Execute os testes conforme necessário.  
 
 ## Autenticação e Uso do Token  
@@ -116,8 +116,8 @@ Endpoint: `POST /api/authenticate`
 
 ```json
 {
-    "email": "usuario@example.com",
-    "password": "senha123"
+    "email": "user@test.com",
+    "password": "123456"
 }
 ```
 **Exemplo de resposta de sucesso (201 OK):**

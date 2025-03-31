@@ -135,7 +135,9 @@ Endpoint: `POST /api/authenticate`
 ### Expiração do Token
 O token tem um tempo de expiração definido no campo "expires_in", que indica o tempo em segundos (neste caso, 300 segundos = 5 minutos).
 
-Após esse tempo, será necessário obter um novo token realizando a autenticação novamente
+Enquanto o usuário continuar realizando requisições dentro do período de validade do token (antes de expirar), ele será renovado automaticamente pela API, garantindo que o acesso continue sem interrupções.
+
+Se o token expirar sem que novas requisições tenham sido feitas dentro do intervalo de tempo permitido, será necessário realizar uma nova autenticação para obter um novo token.
 
 ## Rotas da API
 

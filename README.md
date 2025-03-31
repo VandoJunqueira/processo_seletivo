@@ -94,7 +94,7 @@ Essa coleção já contém os endpoints configurados com os métodos corretos, f
 ### **Como Utilizar**  
 1. Acesse o link da coleção no Postman.  
 2. Importe a coleção para o seu Postman.  
-3. Configure as variáveis necessárias, como `{{base_url}}` e o Authorization `{{tokem}}`.  
+3. Configure as variáveis necessárias, como `{{base_url}}` e o Authorization `{{token}}`.  
 4. Execute os testes conforme necessário.  
 
 ## Autenticação e Uso do Token  
